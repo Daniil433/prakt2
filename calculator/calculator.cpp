@@ -6,8 +6,7 @@
 using namespace std;
  void help(){
     std::cout << "Parametrs:\n -h help\n -t atg(x) in radians\n -d atg(x) in degrees\n -c actg(x) in radians\n -g actg(x) in degrees\n" ;
-}
-    
+}  
 int main(int argc, char *argv[]) {
    int oper,x;
    while((oper = getopt(argc, argv, "tcdgx:h")) != -1) {  
@@ -22,7 +21,7 @@ int main(int argc, char *argv[]) {
                	 	cout << "actg(x) = " << PI/2 - atan(x) << " radians"<< endl;
             break;
             case 'g':
-		         	cout << "actg(x) = " << (PI/2 - atan(x)) * 180 / PI  << " degrees" << endl;
+		        cout << "actg(x) = " << (PI/2 - atan(x)) * 180 / PI  << " degrees" << endl;
             break; 	
             case 'h':
             help();
